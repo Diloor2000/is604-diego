@@ -1,0 +1,8 @@
+Este proyecto contiene el código de métricas. Antes de entregar:
+1. Crear un repositorio GitHub vacío is604-loor (sin README).
+2. Inicializar y subir main como versión inicial (ver instrucciones del chat).
+3. Crear rama s2/metricas con cambios de metricas.ts, index.ts y docs/s2/METRICAS.md.
+4. Ejecutar Postman y reemplazar los datos PENDIENTE en docs/s2/METRICAS.md.
+5. Hacer commit y push de s2/metricas, crear PR y fusionar a main.
+6. Preparar PDF con enlace al PR, texto de METRICAS.md y captura de /health.
+NOTA: Este ZIP contiene los cambios ya hechos. Para reproducir fielmente el historial de ramas de la tarea, usa el ZIP original para el commit inicial en main, y luego copia los tres archivos modificados desde este ZIP a la rama s2/metricas.
