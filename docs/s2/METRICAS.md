@@ -3,17 +3,18 @@
 
 **Estudiante:** Diego Loor
 **Repositorio:** https://github.com/Diloor2000/is604-diego
+**Pull Request:** https://github.com/Diloor2000/is604-diego/pull/1
 
-## Prueba con Postman
+## 1. Resultados de Postman
 
-- Endpoint: GET /health
-- Código HTTP: 200 OK
+- Endpoint evaluado: GET /health
+- Código de estado: 200 OK
 - Tiempo sin bloqueo: 16 ms
-- Tiempo con bloqueo: PENDIENTE
+- Tiempo durante el bloqueo: PENDIENTE ms
 - Petición bloqueante: GET /reporte/bloqueante?n=500000
-- Duración del cálculo: 8489 ms
+- Duración del cálculo bloqueante: 8489 ms
 
-## Respuesta de GET /metricas
+## 2. Respuesta completa de GET /metricas
 
 ```json
 {
@@ -44,11 +45,11 @@
 }
 ```
 
-## Explicación
+## 3. Explicación
 
-Postman mide el tiempo total desde que envía una petición hasta recibir la respuesta.
+Postman mide el tiempo total desde el envío de una petición hasta recibir la respuesta.
 El interceptor mide desde que Express comienza a procesarla hasta finalizar la respuesta.
-Cuando el reporte bloqueante ocupa el hilo principal, las demás peticiones deben esperar.
-Por eso Postman puede mostrar un tiempo mayor que el registrado por el interceptor.
+El reporte bloqueante ocupa el hilo principal y retrasa la atención de otras solicitudes.
+Por eso Postman puede registrar una espera mayor que el interceptor para /health.
 El cliente experimenta lentitud y, si la espera es excesiva, podría producirse un timeout.
 
